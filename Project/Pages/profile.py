@@ -10,6 +10,7 @@ from Project.Locators.locator import Profile
 class TestProfile(Base):
 
     def OpenProfile(self):
+
         Email_Stack = "eld.rus@rambler.ru"
         Pass_Stack = "AAAqqq111"
         self.element_is_visible(Login_page_Locators.LOGIN_LINK).click()
@@ -20,10 +21,12 @@ class TestProfile(Base):
         self.element_is_visible(Profile.PROFILE_AVATAR).click()
 
     def resilt_profile_page(self):
+
         result = self.element_is_present(Profile.WELCOME_TEXT_PROFILE).text
         return result
 
     def EditProfile(self):
+
         num = random.random()
         self.element_is_visible(Profile.EDIT_PROFILE_BTN).click()
         self.element_is_visible(Profile.PROFILE_DISPLAY_NAME).send_keys("AutoTest")

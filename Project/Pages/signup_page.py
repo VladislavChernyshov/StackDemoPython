@@ -10,6 +10,7 @@ from Project.Locators.locator import Cookies
 class SignUp_page(Base):
 
     def UserSignUp(self):
+
         Email_Stack = "eld.rus@rambler.ru"
         Pass_Stack = "AAAqqq111"
         self.element_is_visible(Login_page_Locators.LOGIN_LINK).click()
@@ -20,6 +21,7 @@ class SignUp_page(Base):
         time.sleep(3)
 
     def Resilt_login(self):
+        
         result = self.element_is_present(Login_page_Locators.Welcome_page).text
 
         return result

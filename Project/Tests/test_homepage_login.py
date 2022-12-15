@@ -2,6 +2,7 @@ from Project.Pages.homepage import HomePage
 
 
 class TestHomepage:
+
     def test_homepage(self, driver):
         homepage = HomePage(driver, 'https://stackoverflow.com')
         homepage.open()
